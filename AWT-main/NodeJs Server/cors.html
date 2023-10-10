@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Links</title>
+</head>
+<body>
+  <h1>Social Media Links</h1>
+  <ul>
+    <li><a href="#" id="facebook">Facebook</a></li>
+    <li><a href="#" id="twitter">Twitter</a></li>
+    <li><a href="#" id="instagram">Instagram</a></li>
+    <li><a href="#" id="blocked">Blocked Link</a></li>
+  </ul>
+  
+  <div id="linkContainer"></div>
+  
+  <script>
+    const whitelist = [
+      "facebook",
+      "twitter",
+      "instagram"
+    ];
+
+    const blockedList = [
+      "blocked"
+    ];
+
+    const linkContainer = document.getElementById("linkContainer");
+
+    const socialLinks = {
+      facebook: "https://www.youtube.com/",
+      twitter: "https://twitter.com/",
+      instagram: "https://www.instagram.com/",
+      blocked: "https://www.google.com"
+    };
+
+    const socialLinkElements = document.querySelectorAll("ul li a");
+
+    socialLinkElements.forEach(link => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        
+        const linkId = link.id;
+
+        if (whitelist.includes(linkId)) {
+          if (socialLinks[linkId]) {
+            window.location.href = socialLinks[linkId];
+          } else {
+            console.warn(`Social media link not available for ${linkId}`);
+          }
+        } else if (blockedList.includes(linkId)) {
+          console.warn("Blocked social media link:", linkId);
+        } else {
+          console.warn("Social media link not in the whitelist:", linkId);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

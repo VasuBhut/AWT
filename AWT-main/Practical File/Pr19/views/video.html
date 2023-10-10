@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Upload Test</title>
+  </head>
+
+  <body>
+    <form
+      action="http://localhost:7000/uploads/uploadVideo"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <label for="video">Select Video:</label>
+      <input type="file" name="video" accept=".mp4, .mpeg4" />
+      <br />
+      <button type="submit">Upload Video</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <button >Change color</button>
+    <button >Change color</button>
+    <button >Change color</button><button >Change color</button><button >Change color</button><button >Change color</button>
+
+    <br><br><br>
+    <input id="textBox" type="text" />
+    <div id="output" style="font-size: 40pt;"></div>
+    
+    
+</body>
+<head>
+<script>
+    
+    const btn = document.querySelectorAll("button"); //querySelectorAll()
+    
+    function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+    }
+    function changeBackground(e) { //Event Object =>event, evt,e
+        const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+        document.body.style.backgroundColor = rndCol;
+        // e.target.style.backgroundColor = rndCol;
+        // console.log(e);
+    }
+
+    for (const button of btn){
+        button.addEventListener("click", changeBackground);
+    }
+    
+    // btn.addEventListener("click", () => {
+    //     const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    //     document.body.style.backgroundColor = rndCol;
+    // });
+    
+    //btn.addEventListener("click", changeBackground); //focus blur mouveover mouseout dblclick
+    //btn.removeEventListener("click", changeBackground);
+
+    //Event Property
+    const textBox = document.querySelector("#textBox");
+    const output = document.querySelector("#output");
+    textBox.addEventListener("keydown", (event) => {
+    output.textContent = `You pressed "${event.key}".`;
+});
+    
+        
+</script>
+</head>
+</html>

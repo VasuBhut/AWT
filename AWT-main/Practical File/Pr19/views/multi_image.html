@@ -1,0 +1,21 @@
+<!-- views/uploadMultipleImages.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Multiple Images</title>
+</head>
+
+<body>
+    <h1>Upload Multiple Images</h1>
+    <form action="http://localhost:7000/uploads/uploadBulkImage" method="post" enctype="multipart/form-data">
+        <label for="images">Select Images:</label>
+        <input type="file" name="images" accept=".png, .jpg, .jpeg" multiple>
+        <br>
+        <button type="submit">Upload Images</button>
+    </form>
+</body>
+
+</html>

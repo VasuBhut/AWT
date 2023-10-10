@@ -1,0 +1,155 @@
+<html>
+  <head>
+    <title></title>
+    <style type="text/css">
+      body {
+        font-family: Arial;
+        font-size: 10pt;
+      }
+      table {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+      }
+      table th {
+        background-color: #f7f7f7;
+        color: #333;
+        font-weight: bold;
+      }
+      table th,
+      table td {
+        padding: 5px;
+        border-color: #ccc;
+      }
+      input[type="button"] {
+        background-color: #08f;
+        color: #fff;
+        width: 100%;
+        border-radius: 5px;
+      }
+      .container {
+        text-align: center;
+        background-color: skyblue;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      label {
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+        margin-right: 10px;
+      }
+
+      input {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        height: 25px;
+        width: 20vw;
+      }
+
+      select {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        height: 25px;
+        width: 20vw;
+      }
+
+      p {
+        color: red;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 8px 16px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      #ans {
+        font-weight: bold;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="DataTable.js"></script>
+    <table id="tblCustomers" cellpadding="0" cellspacing="0" border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Id</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>Result</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><input type="button" onclick="Add()" value="Add" /></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <form id="signupform" onsubmit="validate(event)">
+      <div class="container">
+        <h1>Profile Form</h1>
+        <hr />
+        <label for="f_name">Full Name:</label>
+        <input type="text" id="f_name" placeholder="Enter Full Name" />
+        <p id="fullNameError" class="error"></p>
+
+        <label for="id">User Name:</label>
+        <input type="text" id="id" placeholder="Enter Username" />
+        <p id="idError" class="error"></p>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter Email" />
+        <p id="emailError" class="error"></p>
+
+        <label>Phone No:</label>
+        <input
+          type="tel"
+          id="phone"
+          placeholder="Enter Phone Number"
+          maxlength="13"
+        />
+        <p id="phoneError" class="error"></p>
+
+        <label>Result:</label>
+        <input
+          type="file"
+          accept="application/pdf"
+          id="result"
+          placeholder="Provide your result"
+        />
+        <p id="resultError" class="error"></p>
+        <br /><br />
+        <input type="submit" onclick="Add()" value="Add" />
+      </div>
+    </form>
+
+    <script src="GetDataerror.js"></script>
+  </body>
+</html>

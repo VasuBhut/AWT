@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <title></title>
+    <style type="text/css">
+      body {
+        font-family: Arial;
+        font-size: 10pt;
+      }
+      
+      input[type="button"] {
+        background-color: #08f;
+        color: #fff;
+        width: 100%;
+        border-radius: 5px;
+      }
+      .container {
+        text-align: center;
+        background-color: skyblue;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      label {
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+        margin-right: 10px;
+      }
+
+      input {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        height: 25px;
+        width: 20vw;
+      }
+
+      select {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        height: 25px;
+        width: 20vw;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 8px 16px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="dataform" action="/display" method="post">
+      <div class="container">
+        <h1>Profile Form</h1>
+        <hr />
+        <label for="f_name">Full Name:</label>
+        <input
+          type="text"
+          name="fname"
+          id="f_name"
+          placeholder="Enter Full Name"
+        />
+
+        <label for="l_name">Last Name:</label>
+        <input
+          type="text"
+          name="lname"
+          id="l_name"
+          placeholder="Enter Last Name"
+        />
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Enter Email" />
+
+        <label for="phone">Phone No:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Enter Phone Number"
+          maxlength="13"
+        />
+        <label for="ele_subject">Elective Subject:</label>
+        <input
+          type="text"
+          name="ele_subject"
+          id="ele_subject"
+          placeholder="Enter Your Elective Subject"
+        />
+
+        <label for="ele_sub_code">Elective subject code:</label>
+        <input
+          type="text"
+          name="ele_sub_code"
+          id="ele_sub_code"
+          placeholder="Enter Your Elective Subject code" 
+        />
+        <br /><br />
+        <button type="submit" name="submit">Display</button>
+      </div>
+    </form>
+  </body>
+</html>

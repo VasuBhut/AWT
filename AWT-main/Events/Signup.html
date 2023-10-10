@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SignUp</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+      background-color: skyblue;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    label {
+      display: inline-block;
+      width: 100px;
+      text-align: right;
+      margin-right: 10px;
+    }
+
+    input {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      height: 25px;
+      width: 20vw;
+    }
+
+    select {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      height: 25px;
+      width: 20vw;
+    }
+
+    p {
+      color: red;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      font-size: 14px;
+      border-radius: 5px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #ans {
+      font-weight: bold;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <form action="prevent.html" id="signupform" onsubmit="validate(event)">
+    <div class="container">
+      <h1>SignUp Form</h1>
+      <hr />
+      <label for="f_name">Full Name:</label>
+      <input type="text" id="f_name" placeholder="Enter Full Name" />
+      <p id="fullNameError" class="error"></p>
+
+      <label for="u_name">User Name:</label>
+      <input type="text" id="u_name" placeholder="Enter Username" />
+      <p id="usernameError" class="error"></p>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter Email" />
+      <p id="emailError" class="error"></p>
+
+      <label for="pass">Password:</label>
+      <input type="password" id="pass" placeholder="Enter Password" />
+      <p id="passwordError" class="error"></p>
+
+      <label for="c_pass">Confirm Password:</label>
+      <input type="password" id="c_pass" placeholder="Enter Password Again" />
+      <p id="confirmPasswordError" class="error"></p>
+
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="Male" style="width: 2vw;"/>
+      <span for="male" style="width: fit-content;">Male</span>
+      <input type="radio" id="female" name="gender" value="Female" style="width: 2vw;"/>
+      <span for="female" style="width: fit-content;">Female</span>
+      <p id="genderError" class="error"></p>
+
+      <label>Phone No:</label>
+      <input type="tel" id="phone" placeholder="Enter Phone Number" maxlength="13"/>
+      <p id="phoneError" class="error"></p>
+
+      <label>State:</label>
+      <select id="state">
+        <option value="">-- Select State --</option>
+        <option value="Gujarat">Gujarat</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Goa">Goa</option>
+      </select>
+      <p id="stateError" class="error"></p>
+
+      <label style="margin-right: -10vw;width: 22vw;">
+        <input type="checkbox" id="agree" style="width: 2vw;margin-bottom: -2vw; margin-left: -10vw;"/>
+        I agree to all the details which I have filled
+      </label>
+      <p id="agreementError" class="error"></p>
+
+      <br /><br />
+      <input type="submit" value="Register" />
+    </div>
+  </form>
+
+  <script src="Signup.js"></script>
+</body>
+</html>

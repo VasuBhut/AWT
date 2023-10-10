@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple Form</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="tel"],
+    select,
+    input[type="range"] {
+      width: 95%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="radio"],
+    label {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    button[type="submit"] {
+      display: block;
+      width: 95%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    p {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+  </style>
+  <body>
+    <center>
+      <h2>Fill this form</h2>
+    </center>
+    <form action="/display" method="post">
+      <label>First Name:</label><br />
+      <input
+        type="text"
+        name="fname"
+        placeholder="Enter Your Last Name"
+      /><br /><br />
+      <label>Last Name:</label><br />
+      <input
+        type="text"
+        name="lname"
+        placeholder="Enter Your Last Name"
+      /><br /><br />
+      <label>College Id:</label><br />
+      <input
+        type="text"
+        name="id"
+        placeholder="Enter Your  College id"
+      /><br /><br />
+      <label>Email:</label><br />
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter Your Email"
+      /><br /><br />
+      <!-- <input type="password" name="Pass" placeholder="Enter Your Password"><br><br> -->
+      <label>Birth Date:</label><br />
+      <input
+        type="date"
+        name="date"
+        placeholder="Enter Your BirthDate"
+      /><br /><br />
+      <label>Phone No:</label><br />
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Enter Your Phone number"
+      /><br /><br />
+      <label>Elective Subject Code:</label><br />
+      <input
+        type="text"
+        name="ele_sub_code"
+        placeholder="Enter Your Elective Subject Code"
+      /><br /><br />
+      <label>Elective Subject:</label><br />
+      <input
+        type="text"
+        name="ele_subject"
+        placeholder="Enter Your Elective Subject"
+      /><br /><br />
+      <label>Gender:</label><br />
+      <label for="gender-male">Male</label>
+      <input type="radio" id="gender-male" name="gender" value="male" />
+      <label for="gender-female">female</label>
+      <input type="radio" id="gender-female" name="gender" value="female" />
+      <label for="other">Other</label>
+      <input type="radio" id="other" name="gender" value="other" /><br /><br /><br />
+      <label>Select state you are from</label>
+      <select name="state" name="state">
+        <option value="none">--Select--</option>
+        <option value="Gujarat">Gujarat</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="UP">Rajasthan</option>
+        <option value="Uttar-Pradesh">Uttar-Pradesh</option>
+      </select>
+      <br />
+      <br />
+      <label>Enter Your CGPA</label>
+      <input
+        type="range"
+        name="range"
+        id="rangeInput"
+        placeholder=""
+        min="1"
+        max="10"
+        value="5"
+        step="0.01"
+      />
+      <p id="rangeValue">5</p>
+      <br />
+      <br />
+      <label>Current Time:</label><br />
+      <input type="time" name="time" placeholder="Enter the time" />
+      <br />
+      <br />
+      <br />
+      <label>Hobbies</label>
+      <br />
+      <input type="checkbox" name="hobbie" value="Cricket" />
+      <label for="Cricket">Cricket</label><br />
+
+      <input type="checkbox" name="hobbie" value="Football" />
+      <label for="Football">Football</label><br />
+
+      <input type="checkbox" name="hobbie" value="Vollyball" />
+      <label for="Vollyball">Vollyball</label><br />
+
+      <!-- Add more checkboxes as needed -->
+
+      <br />
+      <button type="submit" name="submit">Display</button>
+    </form>
+  </body>
+  <script>
+    const rangeInput = document.getElementById("rangeInput");
+    const rangeValue = document.getElementById("rangeValue");
+
+    rangeInput.addEventListener("input", () => {
+      rangeValue.textContent = rangeInput.value;
+    });
+  </script>
+</html>

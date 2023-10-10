@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function inverse() {
+        document.getElementById("hello").innerHTML =
+          " | edoc lmtH s'hsraD ot emocleW olleH";
+        document.getElementById("inverseButton").innerHTML = "<- Go Back";
+        inverseButton.onclick = () => {
+          goBack();
+        };
+      }
+      function goBack() {
+        // window.location.href = document.referrer;
+        window.location.replace(document.referrer);
+      }
+    </script>
+  </head>
+  <body>
+    <span>Hello Welcome to Vasu's Html code</span>
+    <span id="hello"></span>
+    <br />
+    <button type="submit" id="inverseButton" onclick="inverse()">
+      inverse
+    </button>
+  </body>
+</html>

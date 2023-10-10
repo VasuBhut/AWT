@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: white;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        text-align: center;
+        background-color: skyblue;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+      span {
+        display: flex;
+        justify-content: flex-start;
+      }
+      label {
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+        margin-right: 10px;
+      }
+
+      input[type="number"] {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        height: 25px;
+        width: 19vw;
+      }
+
+      #ans {
+        font-weight: bold;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simple Calculator</h1>
+      <label>Number 1:</label>
+      <input
+        type="number"
+        id="num1"
+        placeholder="Enter Number 1"
+        onblur="calculate()"
+      />
+      <p id="s1"></p>
+      <label>Number 2:</label>
+      <input
+        type="number"
+        id="num2"
+        placeholder="Enter Number 2"
+        onblur="calculate()"
+      />
+      <p id="s2"></p>
+      <label>Answer:</label>
+      <br/>
+      <span id="add"></span>
+      <span id="sub"></span>
+      <span id="mul"></span>
+      <span id="div"></span>
+      <span id="mod"></span>
+
+      <script type="text/javascript" src="nobutton.js">
+
+      </script>
+    </div>
+  </body>
+</html>

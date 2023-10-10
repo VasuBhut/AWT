@@ -1,0 +1,21 @@
+<!-- views/uploadSingleImage.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Single Image</title>
+</head>
+
+<body>
+    <h1>Upload Single Image</h1>
+    <form action="http://localhost:7000/uploads/uploadImage" method="post" enctype="multipart/form-data">
+        <label for="image">Select Image:</label>
+        <input type="file" name="image" accept=".png, .jpg, .jpeg">
+        <br>
+        <button type="submit">Upload Image</button>
+    </form>
+</body>
+
+</html>

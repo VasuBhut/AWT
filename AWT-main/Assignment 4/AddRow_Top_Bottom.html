@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Table Rows Cells</title>
+  </head>
+  <body>
+    <!-- (A) HTML TABLE -->
+    <table id="demoA" border="1">
+        <tr> <td>A</td> <td>B</td> </tr>
+    </table>
+
+    <!-- (B) ADD ROWS CELLS -->
+    <script>
+    function addRow (top) {
+      // (B1) GET TABLE
+    var table = document.getElementById("demoA");
+
+      // (B2) INSERT ROW
+      if (top) { var row = table.insertRow(0); }
+      else { var row = table.insertRow(); }
+
+      // (B3) INSERT CELLS
+      var cell = row.insertCell();
+      cell.innerHTML = "AA";
+      cell = row.insertCell();
+      cell.innerHTML = "BB";
+    }
+    </script>
+    <input type="button" value="Add Bottom" onclick="addRow()">
+    <input type="button" value="Add Top" onclick="addRow(1)">
+  </body>
+</html>

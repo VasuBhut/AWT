@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic JavaScript</title>
+        <!-- <script src=""></script> -->
+    </head>
+    <body>
+        <h3>Basic Arithmatics Operations:</h3>
+        <table><tr>
+        <td>First No</td><td>:</td> <td><input type="text" id="no1" name="" placeholder="Enter Input-1"></input></td></tr><tr></tr>
+        <tr><td>Second No</td><td>:</td><td><input type="text" id="no2" name="" placeholder="Enter Input-2"></input></td></tr><tr></tr>
+        <tr><td>Result</td><td>:</td><td><label id = "res"></label></td></tr><tr></tr>
+        <tr><td></td><td></td><td>
+        <input type="button" id="btnsum" value="Sum" onclick="sum();"></input>
+        <input type="button" id="btnsub" value="Sub" onclick="sub();"></input>
+        <input type="button" id="btnmul" value="Mul" onclick="mul();"></input>
+        </td></tr>
+        </table>
+
+        <script>
+            
+            function sum(){
+                let no1 = parseInt(document.getElementById('no1').value);
+                let no2 = parseInt(document.getElementById('no2').value);
+                res = no1 + no2;
+                document.getElementById('res').innerHTML = res;
+                //alert('Testing...' + res);
+            }
+    
+            function sub(){
+                let no1 = parseInt(document.getElementById('no1').value);
+                let no2 = parseInt(document.getElementById('no2').value);
+                let res = no1 - no2;
+                document.getElementById('res').innerHTML = res;
+            }
+    
+            function mul(){
+                let no1 = parseInt(document.getElementById('no1').value);
+                let no2 = parseInt(document.getElementById('no2').value);
+                let res = no1 * no2;
+                document.getElementById('res').innerHTML = res;
+            }
+                //alert(sum1);
+            </script>
+    </body>
+</html>

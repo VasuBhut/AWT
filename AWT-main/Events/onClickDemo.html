@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <button onclick="changeBackground();">Change color</button>
+    <button onclick="changeBackground();">Change color</button>
+    <button onclick="changeBackground();">Change color</button>
+    <button onclick="changeBackground();">Change color</button>
+    <button onclick="changeBackground();">Change color</button>
+    <button onclick="changeBackground();">Change color</button>
+</body>
+<head>
+<script>
+    
+    const btn = document.querySelector("button");
+    
+    function random(number) {
+        return Math.floor(Math.random() * (number+3));
+    }
+    function changeBackground() {
+        const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`; //=> rgb(255, 255, 255)
+        console.log(rndCol);
+        document.body.style.backgroundColor = rndCol;
+    }
+    
+    
+        
+</script>
+</head>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+  </head>
+  <body>
+    <h1>Image Gallery</h1>
+    <div id="imageContainer">
+      <!-- <picture>
+        <source
+          media="(max-width: 600px)"
+          srcset="../src/images/image_1696668027139.jpg"
+        />
+      </picture> -->
+    </div>
+
+    <script>
+      async function fetchImages() {
+        try {
+          const response = await fetch("http://localhost:7000/uploads/images");
+          const data = await response.json();
+          console.log(data);
+          const imageContainer = document.getElementById("imageContainer");
+
+          data.images.forEach((imageUrl) => {
+            const imageElement = document.createElement("img");
+            imageElement.src = imageUrl;
+            imageElement.style.width = "200px";
+            imageContainer.appendChild(imageElement);
+          });
+        } catch (error) {
+          console.error("Error fetching images:", error.message);
+        }
+      }
+
+      fetchImages();
+    </script>
+  </body>
+</html>
